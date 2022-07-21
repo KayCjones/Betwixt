@@ -1,11 +1,12 @@
 // General Imports
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
-
+import { useState, useEffect } from "react";
 // Pages Imports
 import HomePage from "./pages/HomePage/HomePage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
+import MapPage from './pages/MapPage/MapPage'
 
 // Component Imports
 import Navbar from "./components/NavBar/NavBar";
@@ -13,8 +14,11 @@ import Footer from "./components/Footer/Footer";
 
 // Util Imports
 import PrivateRoute from "./utils/PrivateRoute";
+import SimpleMap from "./pages/MapPage/SimpleMap";
 
 function App() {
+ 
+
   return (
     <div>
       <Navbar />
@@ -23,7 +27,11 @@ function App() {
           path="/"
           element={
             // <PrivateRoute>
-              <HomePage />
+            <><HomePage />
+              {/* <MapPage></MapPage></> */}
+              
+              </>
+              
             // </PrivateRoute>
           }
         />
